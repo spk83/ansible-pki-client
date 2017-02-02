@@ -1,0 +1,3 @@
+---
+pki_client_locals: '{% if pki_client_include_localhost is defined and pki_client_include_localhost %}["localhost","127.0.0.1"]{% else %}[]{% endif %}'
+pki_client_hosts: '{{ [pki_client_cname] + pki_client_locals + pki_client_sans|default([]) + pki_client_altips|default([]) }}'
