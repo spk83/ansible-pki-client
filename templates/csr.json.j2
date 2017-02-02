@@ -1,0 +1,5 @@
+{
+    "hosts": {{ [ pki_client_cname ] + ( pki_client_sans|default([]) + pki_client_altips|default([]) ) | to_json}},
+    "key" : {{ pki_client_key | to_json }},
+    "names" : {{ pki_client_names | to_json }}
+}

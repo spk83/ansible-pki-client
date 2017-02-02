@@ -1,0 +1,24 @@
+# creates a CSR and private key in given directory for client
+# ~/pki/www-1.example.com.csr
+# ~/pki/www-1.example.com-key.pem
+
+pki_client_dir: "~/pki"
+
+pki_client_names:
+  - C: US
+    L: 'New York'
+    O: 'Example'
+    OU: WWW
+    ST: 'New York'
+
+pki_client_key:
+  algo: rsa
+  size: 2048
+
+pki_client_cname: www-1.example.com
+pki_client_sans:
+  - www.example.com
+pki_client_include_localhost: True    
+pki_client_altips: []
+
+pki_client_cfssl_root: /usr/local/bin
