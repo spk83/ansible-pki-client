@@ -1,5 +1,6 @@
 spk83.pki-client
 ================
+[![Build Status](https://travis-ci.org/spk83/ansible-pki-client.svg?branch=master)](https://travis-ci.org/spk83/ansible-pki-client)
 
 A role to generate certificate signing request (CSR) and private key for a host using CFSSL. Supports subject alternate names. 
 
