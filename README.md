@@ -30,8 +30,8 @@ Recommended to target localhost if you're managing a local eyes-above-the-wall P
     - role: spk83.pki-client
       pki_client_dir: ~/pki
       pki_client_cname: www-1.example.com
-	  pki_client_sans:
-  		- www.example.com
+      pki_client_sans:
+        - www.example.com
 ```
 
 License
