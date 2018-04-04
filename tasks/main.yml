@@ -12,9 +12,11 @@
     src: '{{item}}.j2'
     dest: '{{pki_client_dir}}/{{pki_client_cname}}.json'
     mode: 0600
+  register: csr
 
 - name: generating CSR and key for client
   shell: '{{pki_client_cfssl_root}}/cfssl genkey {{pki_client_cname}}.json | {{pki_client_cfssl_root}}/cfssljson -bare {{pki_client_cname}}'
+  when: csr.changed
   args:
     chdir: '{{pki_client_dir}}'
     creates: '{{pki_client_dir}}/{{pki_client_cname}}.csr'
